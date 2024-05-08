@@ -58,7 +58,7 @@ let shapes = shapesrot[0];
 let color = 1;
 let lvl = 1;
 let game = true;
-let oblicichecked = [1,1,1,1,1,1,1]
+let oblicichecked= [1,1,1,1,1,1,1]
 let broblika = 7;
 let game_counter = 1;
 let ms = 1000;
@@ -107,7 +107,9 @@ $(document).ready(function(){
 });
 
 function dohvatiOblike(){
-    oblicichecked = JSON.parse(localStorage.getItem("oblici"));
+    if(localStorage.getItem("oblici")){
+    	oblicichecked = JSON.parse(localStorage.getItem("oblici"));
+    }
     console.log(oblicichecked);
     let s =0;
     for(let i=6;i>=0;i--){
