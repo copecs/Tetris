@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'gaming';
+    src: url('tetris-dodatno/Retro\ Gaming.ttf') format('truetype'); 
+}
+
+
+body {
+    font-family: 'gaming', sans-serif; 
+    background: linear-gradient(to bottom, #4B0082, #000000);
+    color: white;
+    height: 100vh; 
+    width: 100vw; 
+  }
+
+  .potpis {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 14px;
+  }
+
+  .centerdiv2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnplay{
+    margin: 100px;
+    width: 100px;
+}
+
+.bpink{
+background-color:#FF33E9 ;
+}
+.bwhite{
+    background-color:#33FF57;
+}
+.bred{
+    background-color:#FF5733 ;
+}
+.borange{
+    background-color:#FFBD33;
+}
+.bgreen{
+    background-color:#33FF57;
+}
+.bpurple{
+    background-color:#B433FF;
+}
+
+.unselectable-text {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}

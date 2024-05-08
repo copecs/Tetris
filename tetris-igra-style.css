@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'gaming';
+    src: url('tetris-dodatno/Retro\ Gaming.ttf') format('truetype'); 
+  }
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    width: 30px; 
+    height: 30px; 
+    border: 1px solid #494949;
+    background-color: #202020;
+}
+
+.centerdiv{
+    display:flex;
+    justify-content: center;
+}
+
+
+body {
+    font-family: 'gaming', sans-serif; 
+    background: linear-gradient(to bottom, #4B0082, #000000);
+    color: white;
+    height: 100vh; 
+    width: 100vw; 
+  }
+
+  .potpis {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 14px;
+  }
+
+  img{
+    width: 70px;
+  }
+
+.h10 {
+    color: #33FFBD;
+}
+.h11 {
+    color: #338AFF; 
+}
+.h12 {
+    color: #FF33E9; 
+}
+.h13 {
+    color: #FF5733;
+}
+.h14 {
+    color:  #33FFBD; 
+}
+.h15 {
+    color: #FF3333;; 
+}

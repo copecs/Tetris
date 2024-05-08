@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="tetris-igra-style.css">
+    <script src="tetris-igra-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class = "row justify-content-center">
+            <h1 class="h10">T</h1>
+            <h1 class="h11">e</h1>
+            <h1 class="h12">t</h1>
+            <h1 class="h13">r</h1>
+            <h1 class="h14">i</h1>
+            <h1 class="h15">s</h1>
+            <br>
+            <br>
+        </div>
+
+        <div class="row">
+            <div class="col-3 justify-content-center">
+                <div class="col-12">
+                    <h4>Controls:</h4>
+                </div>
+                <div class="col-12"><img src="tetris-dodatno/left.png" alt="">move left</div>
+                <div class="col-12"><img src="tetris-dodatno/right.png" alt="">move right</div>
+                <div class="col-12"><img src="tetris-dodatno/up.png" alt="">rotate</div>
+                <div class="col-12"><img src="tetris-dodatno/down.png" alt="">move down</div>
+   
+                
+                
+                
+                
+            </div>
+            <div class="col-6 justify-content-center">
+                <div class = "centerdiv">
+                    <table id="tetris-table">
+                    </table>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="row"><div class = "col-12">Score:<p id ="score" class = "h12"></p></div></div>
+                <div class="row"><div class = "col-12">Level:<p id = "lvl" class = "h10"></p></div></div>
+                <div class="row">
+                    <p class = "col-12">NextBlock:</p>
+                    <div class = "col-12">
+                        <table  id = "nextblock">
+                            <tr>
+                                <td id="00"></td>
+                                <td id="01"></td>
+                                <td id="02"></td>
+                                <td id="03"></td>
+                            </tr>
+                            <tr>
+                                <td id="10"></td>
+                                <td id="11"></td>
+                                <td id="12"></td>
+                                <td id="13"></td>
+                            </tr>
+                            <tr>
+                                <td id="20"></td>
+                                <td id="21"></td>
+                                <td id="22"></td>
+                                <td id="23"></td>
+                            </tr>
+                            <tr>
+                                <td id="30"></td>
+                                <td id="31"></td>
+                                <td id="32"></td>
+                                <td id="33"></td>
+                            </tr>
+                        </table></div>
+
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class="potpis">
+        &copy;Petar Mihajlovic 0053/2022
+      </div>
+</body>
+</html>

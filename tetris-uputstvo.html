@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="tetris-igra-style.css">
+    <link rel="stylesheet" href="tetris-uputstvo-style.css">
+    <script src="tetris-uputstvo-script.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class = "row justify-content-center">
+            <h1 class="h10">T</h1>
+            <h1 class="h11">e</h1>
+            <h1 class="h12">t</h1>
+            <h1 class="h13">r</h1>
+            <h1 class="h14">i</h1>
+            <h1 class="h15">s</h1>
+            <br>
+            <br>
+        </div>
+
+        <div class="row">
+            <div class="col-3 justify-content-center">
+                <div class="col-12">
+                    <h4>Controls:</h4>
+                </div>
+                <div class="col-12"><img src="tetris-dodatno/left.png" alt="">move left</div>
+                <div class="col-12"><img src="tetris-dodatno/right.png" alt="">move right</div>
+                <div class="col-12"><img src="tetris-dodatno/up.png" alt="">rotate</div>
+                <div class="col-12"><img src="tetris-dodatno/down.png" alt="">move down</div>
+                <div class="col-12"><br></div>
+                <div class="col-12">
+                    <h4>Level:</h4>
+                </div>
+                <div class="col-12">1<input type="range" min="1" max="3" value="1" step="1" id="lvl">3</div>
+
+
+            </div>
+            <div class="col-6 justify-content-center">
+                <div class = "row"></div>
+                <div class = "row justify-content-center">
+                    <table id="tetris-table">
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="bwhite"></td>
+                            <td class="bwhite"></td>
+                            <td class="bpurple"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="bred"></td>
+                            <td class="b"></td>
+                            <td class="borange"></td>
+                            <td class="b"></td>
+                            <td class="borange"></td>
+                        </tr>
+                        <tr>
+                            <td class="bwhite"></td>
+                            <td class="bwhite"></td>
+                            <td class="bpurple"></td>
+                            <td class="b"></td>
+                            <td class="bred"></td>
+                            <td class="bred"></td>
+                            <td class="bred"></td>
+                            <td class="borange"></td>
+                            <td class="borange"></td>
+                            <td class="borange"></td>
+                        </tr>
+                        <tr>
+                            <td class="bwhite"></td>
+                            <td class="b"></td>
+                            <td class="bpurple"></td>
+                            <td class="bpurple"></td>
+                            <td class="bred"></td>
+                            <td class="b"></td>
+                            <td class="bred"></td>
+                            <td class="b"></td>
+                            <td class="borange"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                        <tr>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                            <td class="b"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class = "row"></div>
+            </div>
+            <div class="col-3">
+                <div class="col-12">
+                    <h4>Choose:</h4>
+                </div>
+                <div class="col-12"><label for="id3"><img src="tetris-dodatno/J.png"></label><input type="checkbox" checked name="id3" id="id3"></div>
+                <div class="col-12"><label for="id2"><img src="tetris-dodatno/L.png" alt=""></label><input type="checkbox" checked name="id2" id="id2"></div>
+                <div class="col-12"><label for="id5"><img src="tetris-dodatno/s.png" alt=""></label><input type="checkbox" checked name="id5" id="id5"></div>
+                <div class="col-12"><label for="id4"><img src="tetris-dodatno/T.png" alt=""></label><input type="checkbox" checked name="id4" id="id4"></div>
+                <div class="col-12"><label for="id1"><img src="tetris-dodatno/line.png" alt=""></label><input type="checkbox" checked name="id1" id="id1"></div>
+                <div class="col-12"><label for="id6"><img src="tetris-dodatno/z.png" alt=""></label><input type="checkbox" checked name="id6" id="id6"></div>
+                <div class="col-12"><label for="id0"><img src="tetris-dodatno/sqr.png" alt=""></label><input type="checkbox" checked name="id0" id="id0"></div>
+
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class="potpis">
+        &copy;Petar Mihajlovic 0053/2022
+      </div>
+</body>
+</html>
