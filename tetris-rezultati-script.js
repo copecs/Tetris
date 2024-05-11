@@ -63,7 +63,7 @@ function computeHighScores(){
     for(let i=0;i<5;i++){
         if(HighScores[i][1]<lastGame[1]){
             let index = i;
-            for(let j=i+1;j<5;j++){
+            for(let j=4;j>=i+1;j--){
                 for(let j2=0;j2<2;j2++){
                     HighScores[j][j2]=HighScores[j-1][j2];
                 }
