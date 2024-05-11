@@ -10,7 +10,8 @@ let lastGame =["YourName",0]
 
 $(document).ready(function(){
     read();
-    computeHighScores();
+    if(!lastgameinhighscores())
+        computeHighScores();
     save();
     for (var i = 0; i < 5; i++) {
         var sc = $("<p></p>");
@@ -51,7 +52,13 @@ function read(){
     if(localStorage.getItem("lastGame")!=null)
         lastGame = JSON.parse(localStorage.getItem("lastGame"));
 }
-
+function lastgameinhighscores(){
+    for(let i=0;i<5;i++){
+        if(HighScores[i][1]==lastGame[1] && HighScores[i][0]==lastGame[0])
+            return true;
+    }
+    return false;
+}
 function computeHighScores(){
     for(let i=0;i<5;i++){
         if(HighScores[i][1]<lastGame[1]){

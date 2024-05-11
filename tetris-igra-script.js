@@ -20,7 +20,7 @@ let shapesrot = [[ //defaultpos
  [ //180*
     [[1, 1], [1, 1]],          // 0 Square
     [[1], [1], [1], [1]],      // 1 Line
-    [[1, 1, 1],[0,0,1]],    // 2 L Shape
+    [[1, 1], [0,1], [0,1]],    // 2 L Shape
     [[1, 1], [1, 0], [1, 0]],  // 3 J Shape
     [[1, 1, 1], [0, 1, 0]],    // 4 T Shape
     [[0, 1, 1], [1, 1, 0]],    // 5 S Shape
@@ -29,7 +29,7 @@ let shapesrot = [[ //defaultpos
  [ //270
     [[1, 1], [1, 1]],          // 0 Square
     [[1,1,1,1]],    // 1 Line
-    [[0, 1], [0, 1], [1, 1]],  // 2 L Shape
+    [[0, 0,1],[1,1,1]],   // 2 L Shape
     [[1, 1,1],[0,0,1]],    // 3 J Shape
     [[0,1],[1,1] ,[0, 1]],    // 4 T Shape
     [[1, 0], [1, 1], [0, 1]],    // 5 S Shape
@@ -263,6 +263,7 @@ function draw_shape(){
         for(let i =0;i<currentShape.length;i++){
             for(let j=0;j<currentShape[i].length;j++){
                 board[currentRow+i][currentCol+j]=currentShape[i][j]!=0?currentShape[i][j]:board[currentRow+i][currentCol+j];
+                console.log(board);
             }
         }
         return true;
@@ -273,7 +274,7 @@ function erase_shape(){
     for(let i =0;i<currentShape.length;i++){
         for(let j=0;j<currentShape[i].length;j++){
             try {
-                board[currentRow+i][currentCol+j]=0;
+                board[currentRow+i][currentCol+j]=fixed[currentRow+i][currentCol+j];
 
             } catch (error) {
                 
